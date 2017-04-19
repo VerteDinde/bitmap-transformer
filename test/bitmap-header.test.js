@@ -28,6 +28,6 @@ describe('bitmap header', () => {
     const header = new BitmapHeader(buffer);
     assert.equal(header.pixelOffset, 54);
     assert.equal(header.bitsPerPixel, 24);
-    assert.equal(header.fileSize, 30000);
+    assert.equal(header.fileSize, 30054);
   });
 });
