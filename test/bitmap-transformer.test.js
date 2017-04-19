@@ -9,7 +9,10 @@ describe('bitmap file transformer', () => {
   before(() => {
     // TODO: read './test/test-bitmap.bmp' into buffer variable
     // HINT: return a promise, this is async!
-
+    return fsp.readFile('./test/test-bitmap.bmp')
+      .then(data => {
+        buffer = data;
+      });
     // TODO: the functionality in this before is same as 
     // other test, can you remove (extract) the duplication?
   });
