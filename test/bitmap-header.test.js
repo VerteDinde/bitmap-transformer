@@ -1,5 +1,4 @@
 const assert = require('assert');
-const fs = require('fs');
 const fsp = require('fs-promise');
 const constants = require('../lib/bitmap-constants');
 const BitmapHeader = require('../lib/bitmap-header');
@@ -9,17 +8,14 @@ describe('bitmap header', () => {
   let buffer = null;
   before(() => {
     // TODO: read './test/test-bitmap.bmp' into buffer variable
-    // fsp.readFile('./test/test-bitmap.bmp', (err, buffer) => {
-    //   const pixelStart = buffer.readUInt32LE(10);
-    // })
-    // .then((pixelStart) => {
-    //   //
-    // });
-
     // HINT: return a promise, this is async!
+    return fsp.readFile('./test/test-bitmap.bmp')
+      .then(data => {
+        buffer = Buffer.from(data);
+      });
   });
 
-  it.only('has correct specs', () => {
+  it('has correct specs', () => {
     // TODO: read the docs to figure out what these values should be
     assert.ok(constants.PIXEL_OFFSET);
     assert.ok(constants.BITS_PER_PIXEL_OFFSET);
