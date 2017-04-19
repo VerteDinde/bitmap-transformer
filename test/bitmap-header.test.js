@@ -9,12 +9,12 @@ describe('bitmap header', () => {
   let buffer = null;
   before(() => {
     // TODO: read './test/test-bitmap.bmp' into buffer variable
-    fsp.readFile('./test/test-bitmap.bmp', (err, buffer) => {
-      const pixelStart = buffer.readUInt32LE(10);
-    })
-    .then((pixelStart) => {
-      //
-    });
+    // fsp.readFile('./test/test-bitmap.bmp', (err, buffer) => {
+    //   const pixelStart = buffer.readUInt32LE(10);
+    // })
+    // .then((pixelStart) => {
+    //   //
+    // });
 
     // HINT: return a promise, this is async!
   });
