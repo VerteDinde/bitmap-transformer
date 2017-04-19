@@ -19,8 +19,8 @@ This lab is more structured and there are tests to guide you:
 
 1. Start with the tests in `bitmap-header.test.js`. This will require you to find
 the location of the needed data using the wikipedia article.
-  1. The first test requires that you have the right constants defined
-  2. The second test requires that you create a `BitmapHeader` class that finds the information
+   1. The first test requires that you have the right constants defined
+   2. The second test requires that you create a `BitmapHeader` class that finds the information
   in the bitmap header and structures it as properties of the `bitmapHeader` instance.
 2. Create two transformation functions, following the tests in `transformers.test.js`
 3. The final test in `bitmap-transformer.test.js` requires you to integrate header and transformations
