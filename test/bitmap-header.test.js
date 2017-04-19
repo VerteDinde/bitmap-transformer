@@ -11,7 +11,7 @@ describe('bitmap header', () => {
     // HINT: return a promise, this is async!
     return fsp.readFile('./test/test-bitmap.bmp')
       .then(data => {
-        buffer = Buffer.from(data);
+        buffer = data;
       });
   });
 
