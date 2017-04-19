@@ -1,3 +1,4 @@
+const assert = require('assert');
 const constants = require('../lib/bitmap-constants');
 const BitmapHeader = require('../lib/bitmap-header');
 
@@ -5,7 +6,7 @@ describe('bitmap header', () => {
 
     let buffer = null;
     before(() => {
-        // TODO: read './test/non-palette-bitmap.bmp' into buffer variable
+        // TODO: read './test/test-bitmap.bmp' into buffer variable
 
         // HINT: return a promise, this is async!
     });
@@ -17,7 +18,7 @@ describe('bitmap header', () => {
         assert.ok(constants.FILE_SIZE_OFFSET);
     });
 
-    it('parses non-paletted header data', () => {
+    it('parses header data', () => {
         // TODO: use the constants to populate the following properties
         // on the BitmapHeader in its constructor
         const header = new BitmapHeader(buffer);
