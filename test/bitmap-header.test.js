@@ -9,17 +9,17 @@ describe('bitmap header', () => {
   let buffer = null;
   before(() => {
     // TODO: read './test/test-bitmap.bmp' into buffer variable
-    fsp.read('./test/test-bitmap.bmp', (err, buffer) => {
+    fsp.readFile('./test/test-bitmap.bmp', (err, buffer) => {
       const pixelStart = buffer.readUInt32LE(10);
-      buffer.
-      buffer.writeUInt32LE(86, 10);
     })
-    .then(resolve)
+    .then((pixelStart) => {
+      //
+    });
 
     // HINT: return a promise, this is async!
   });
 
-  it('has correct specs', () => {
+  it.only('has correct specs', () => {
     // TODO: read the docs to figure out what these values should be
     assert.ok(constants.PIXEL_OFFSET);
     assert.ok(constants.BITS_PER_PIXEL_OFFSET);
